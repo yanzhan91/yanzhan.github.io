@@ -1379,3 +1379,9 @@ footer .credits a {
   color: #0078ff !important;
   text-decoration: none !important;
 }
+
+.table-borderless td,
+.table-borderless th {
+    border: 0;
+    font-size: 6;
+}
