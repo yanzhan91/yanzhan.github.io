@@ -1374,3 +1374,8 @@ footer .credits {
 footer .credits a {
   color: #fff;
 }
+
+.download-link {
+  color: #0078ff !important;
+  text-decoration: none !important;
+}
