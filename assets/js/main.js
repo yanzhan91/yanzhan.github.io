@@ -4,30 +4,30 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function($) {
+(function ($) {
   "use strict";
 
   var nav = $('nav');
   var navHeight = nav.outerHeight();
 
   // Preloader
-  $(window).on('load', function() {
+  $(window).on('load', function () {
     if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
+      $('#preloader').delay(100).fadeOut('slow', function () {
         $(this).remove();
       });
     }
   });
 
   // Back to top button
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
       $('.back-to-top').fadeOut('slow');
     }
   });
-  $('.back-to-top').click(function() {
+  $('.back-to-top').click(function () {
     $('html, body').animate({
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
@@ -113,5 +113,44 @@
   //     'share': false
   //   });
   // });
+
+
+  $(document).ready(function () {
+    document.getElementById('dealcircles').addEventListener('click', function () {
+      lightGallery(document.getElementById('dealcircles'), {
+        width: '800px',
+        height: '600px',
+        addClass: 'fixed-size',
+        dynamic: true,
+        dynamicEl: [{
+          "src": 'assets/img/dealcircles-1.jpg',
+        }, {
+          'src': 'assets/img/dealcircles-2.jpg',
+        }, {
+          'src': 'assets/img/dealcircles-3.jpg',
+        }]
+      })
+    });
+
+    document.getElementById('planti').addEventListener('click', function () {
+      lightGallery(document.getElementById('planti'), {
+        width: '800px',
+        height: '600px',
+        addClass: 'fixed-size',
+        dynamic: true,
+        dynamicEl: [{
+          "src": 'assets/img/planti-1.jpg',
+        }, {
+          'src': 'assets/img/planti-2.jpg',
+        }, {
+          'src': 'assets/img/planti-3.jpg',
+        }, {
+          'src': 'assets/img/planti-4.jpg',
+        }, {
+          'src': 'assets/img/planti-5.jpg',
+        }]
+      })
+    });
+  });
 
 })(jQuery);
